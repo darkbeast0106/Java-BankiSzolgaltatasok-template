@@ -59,15 +59,15 @@ class BankTest {
         Szamla sz4 = bank.szamlaNyitas(t2, 1);
         Szamla sz5 = bank.szamlaNyitas(t3, 0);
         Szamla sz6 = bank.szamlaNyitas(t3, 1);
-        sz1.befizet(15000);
+        sz1.befizet(85000);
         sz2.befizet(10000);
         sz3.befizet(30000);
         sz4.befizet(35000);
-        sz5.befizet(70000);
-        sz6.befizet(75000);
+        sz5.befizet(75000);
+        sz6.befizet(70000);
         assertEquals(sz1, bank.getLegnagyobbEgyenleguSzamla(tulajdonos));
         assertEquals(sz4, bank.getLegnagyobbEgyenleguSzamla(t2));
-        assertEquals(sz6, bank.getLegnagyobbEgyenleguSzamla(t3));
+        assertEquals(sz5, bank.getLegnagyobbEgyenleguSzamla(t3));
     }
 
     @Test
