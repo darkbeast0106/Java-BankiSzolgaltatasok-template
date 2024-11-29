@@ -43,7 +43,7 @@ class SzamlaTest {
 
     @Test
     void ujKartya() {
-        Kartya k = new Kartya(szamla.getTulajdonos(), szamla, "1234-5678");
+        Kartya k = szamla.ujKartya("1234-5678");
         szamla.befizet(10000);
         k.vasarlas(3000);
         assertEquals(7000, szamla.getAktualisEgyenleg());
